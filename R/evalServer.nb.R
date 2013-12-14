@@ -7,7 +7,7 @@
 #' @return If blocking is FALSE it always returns the string 
 #'   '___non-blocking___' otherwise it will return whatever was evaluated
 #' @export
-evalServer.nb <- function (con, expr, blocking = FALSE)  {
+evalServer.nb <- function (con, expr, blocking = TRUE)  {
   rl.tmp <- readLines(con)  
   x <- expr
 

@@ -2,7 +2,7 @@
 \alias{evalServer.nb}
 \title{Non-blocking Socket Server evaluation}
 \usage{
-  evalServer.nb(con, expr, blocking = FALSE)
+  evalServer.nb(con, expr, blocking = TRUE)
 }
 \arguments{
   \item{con}{A connection}

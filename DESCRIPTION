@@ -9,6 +9,10 @@ Maintainer: ZJ <dzj@analytixware.com>
 Description: This provides a go.socket function which will allow the user to
     execute code in a non-blocking manner on the server
 License: MIT
+Depends:
+    R (>= 3.0.2),
+    svSocket,
+    parallel
 Collate:
     'close.go.socket.R'
     'evalServer.nb.R'

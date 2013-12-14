@@ -19,6 +19,6 @@ go.socket <- function(code,port = round(runif(1, min = 3000, max = 8000))) {
   
   clusterCall(cl,tmp,x = port)
   con <- socketConnection(port=port)
-  evalServer.nb(con,code,return.res=FALSE)
+  evalServer.nb(con,code,blocking=FALSE)
   return(list(cluster = cl, con =con, port = port))
 }
