@@ -1,9 +1,16 @@
 Package: gosocket
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: gosocket allows goroutine-like non-blocking executon of code on socket
+    server
+Version: 0.1.0
 Date: 2013-12-14
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: AnalytixWare
+Maintainer: ZJ <dzj@analytixware.com>
+Description: This provides a go.socket function which will allow the user to
+    execute code in a non-blocking manner on the server
+License: MIT
+Collate:
+    'close.go.socket.R'
+    'evalServer.nb.R'
+    'go.socket.R'
+    'zzz.R'

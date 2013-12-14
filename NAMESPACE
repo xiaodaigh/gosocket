@@ -1,1 +1,3 @@
-exportPattern("^[[:alpha:]]+")
+export(close.go.socket)
+export(evalServer.nb)
+export(go.socket)
