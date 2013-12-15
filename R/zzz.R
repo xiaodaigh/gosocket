@@ -1,5 +1,6 @@
 .onLoad <- function(libname, pkgname) {
-    require(shiny)    
+    require(parallel)
+    require(svSocket)    
 }
 
 .onAttach <- function(libname, pkgname) {
