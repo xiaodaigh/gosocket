@@ -8,10 +8,11 @@
 #'   '___non-blocking___' otherwise it will return whatever was evaluated
 #' @export
 evalServer.nb <- function (con, expr, blocking = TRUE)  {
-  rl.tmp <- readLines(con)  
+  
+  readLines(con)  
   x <- expr
-
-  if(blocking) {
+  #browser()
+  if(blocking) {    
     cat("..Last.value <- try(eval(parse(text = \"", x, "\"))); .f <- file(); dump(\"..Last.value\", file = .f); flush(.f); seek(.f, 0); cat(\"\\n<<<startflag>>>\", gsub(\"<pointer: [0-9a-fx]+>\", \"NULL\", readLines(.f)), \"<<<endflag>>>\\n\", sep = \"\\n\"); close(.f); rm(.f, ..Last.value); flush.console()\n", 
         file = con, sep = "")  
     objdump <- ""
@@ -42,8 +43,9 @@ evalServer.nb <- function (con, expr, blocking = TRUE)  {
     source(objcon, local = TRUE, echo = FALSE, verbose = FALSE)
     return(..Last.value)
   } else {
-    cat("..Last.value <- try(eval(parse(text = \"", x, "\")));", 
-        file = con, sep = "")
+    #cat("..Last.value <- try(eval(parse(text = \"", x, "\"))); .f <- file(); dump(\"..Last.value\", file = .f); flush(.f); seek(.f, 0); cat(\"\\n<<<startflag>>>\", gsub(\"<pointer: [0-9a-fx]+>\", \"NULL\", readLines(.f)), \"<<<endflag>>>\\n\", sep = \"\\n\"); close(.f); rm(.f, ..Last.value); flush.console()\n", file = con, sep = "")  
+    cat("..Last.value <- try(eval(parse(text = \"", x, "\")));  rm(..Last.value); flush.console()\n", file = con, sep = "")  
+    #cat("..Last.value <- try(eval(parse(text = \"", x, "\")));  flush.console()\n", file = con, sep = "")  
     return('___non-blocking___') 
   }  
 }
