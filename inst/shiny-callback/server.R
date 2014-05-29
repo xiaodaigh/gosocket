@@ -27,12 +27,12 @@ shinyServer(function(input, output,session) {
           f <- call.back.register$call.back.func[[1]]
           call.back.register$call.back.func[[1]] <<- NULL
           f()        
-          showshinyalert("alert2","The callback has been called!",session,"success")
+          showshinyalert(session,"alert2","The callback has been called!","success")
         }
       }
   })
   
-  
+  x
   # add a callback when the button is clicked
   observe({
     if(input$btn  == 0) return()
@@ -44,7 +44,7 @@ shinyServer(function(input, output,session) {
     gs$tmp.f <- tmp.f
     
     
-    showshinyalert("alert1","It is sleeping for 30 seconds in another process! But this is not blocked! When it wakes up it will trigger another alert",session,"success")
+    showshinyalert(session,"alert1","It is sleeping for 30 seconds in another process! But this is not blocked! When it wakes up it will trigger another alert","success")
     l <- length(call.back.register$go.sockets) + 1        
     call.back.register$go.sockets[l] <<- list(gs)
     call.back.register$call.back.func[l] <<- list(f = function() {print("call back successful")})
