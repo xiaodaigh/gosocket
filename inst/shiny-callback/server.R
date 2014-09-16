@@ -15,6 +15,7 @@ shinyServer(function(input, output,session) {
   
   # a reactive timer to watch the call.back.register
   observe({
+    #browser()
     a() 
     #print("periodic checking if file exsits")
     
@@ -32,7 +33,7 @@ shinyServer(function(input, output,session) {
       }
   })
   
-  x
+  
   # add a callback when the button is clicked
   observe({
     if(input$btn  == 0) return()
