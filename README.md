@@ -1,6 +1,6 @@
 gosocket
 ========
-Allows for simple go-routine like execution of code in a non-blocking manner on socket server.
+Allows for simple go-routine like execution of code (as in syntax but NOT in lightweight-ness) in a non-blocking manner on socket server.
 
 # Install
 <div style="overflow:auto;"><div class="geshifilter"><pre class="r geshifilter-R" style="font-family:monospace;"><a href="http://inside-r.org/r-doc/utils/install.packages"><span style="color: #003399; font-weight: bold;">install.packages</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;devtools&quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #666666; font-style: italic;">#if not already installed</span>
