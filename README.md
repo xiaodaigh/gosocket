@@ -4,7 +4,7 @@ Allows for simple go-routine like execution of code (as in syntax but NOT in lig
 
 # Install
 <div style="overflow:auto;"><div class="geshifilter"><pre class="r geshifilter-R" style="font-family:monospace;"><a href="http://inside-r.org/r-doc/utils/install.packages"><span style="color: #003399; font-weight: bold;">install.packages</span></a><span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;devtools&quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #666666; font-style: italic;">#if not already installed</span>
-devtools<span style="">::</span>install_github<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;gosocket&quot;</span><span style="color: #339933;">,</span><span style="color: #0000ff;">&quot;AnalytixWare&quot;</span><span style="color: #009900;">&#41;</span></pre></div></div><p>
+devtools<span style="">::</span>install_github<span style="color: #009900;">&#40;</span><span style="color: #0000ff;">&quot;AnalytixWare/gosocket&quot;</span><span style="color: #009900;">&#41;</span></pre></div></div><p>
 
 # Usage
 <div style="overflow:auto;"><div class="geshifilter"><pre class="r geshifilter-R" style="font-family:monospace;"><a href="http://inside-r.org/r-doc/base/require"><span style="color: #003399; font-weight: bold;">require</span></a><span style="color: #009900;">&#40;</span>gosocket<span style="color: #009900;">&#41;</span>
