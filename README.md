@@ -11,7 +11,7 @@ devtools::install_github("AnalytixWare/gosocket")
 # Usage
 ```r
 library(gosocket)
-system.time(gs <- go.socket("z <- rnorm(10^8)")) # go.socket is non-blocking the rest of the code will execute almost immedidately
+system.time(gs <- go.socket("z <- rnorm(10^8)")) # go.socket is non-blocking the rest of the code will execute almost immediately
 print("Don't have to wait for it to finish") 
 evalServer.nb(gs$con,"summary(z)") # to retrieve the results; this is blocking
 print("The above you have to wait for!")
