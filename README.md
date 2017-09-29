@@ -1,3 +1,7 @@
+# Use the future package
+The functionality demonstrated in this toy example is better implemented in the [future package](https://cran.r-project.org/web/packages/future/vignettes/future-1-overview.html) already. 
+
+
 gosocket
 ========
 Allows for simple go-routine like execution of code (as in syntax but NOT in lightweight-ness) in a non-blocking manner on socket server.
